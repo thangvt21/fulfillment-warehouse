@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+    <div>
+      <form class="form-container">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Role</mat-label>
+          <mat-select>
+            <mat-option value="seller">Seller</mat-option>
+            <mat-option value="admin">Admin</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
