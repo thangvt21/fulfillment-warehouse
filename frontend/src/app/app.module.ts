@@ -23,13 +23,24 @@ import { DeleteDialogAccountsComponent } from './accounts/delete-dialog-accounts
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { AllProductsComponent } from './core/product/all-products/all-products.component';
+import { CreateProductsComponent } from './core/product/create-products/create-products.component';
+import { EditProductsComponent } from './core/product/edit-products/edit-products.component';
+import { RemoveProductsComponent } from './core/product/remove-products/remove-products.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AccountsComponent,
     CreateAccountComponent,
     EditAccountComponent,
-    DeleteDialogAccountsComponent
+    DeleteDialogAccountsComponent,
+    AllProductsComponent,
+    CreateProductsComponent,
+    EditProductsComponent,
+    RemoveProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +61,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatDialogModule,
     MatDividerModule,
     MatMenuModule,
+    MatPaginatorModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

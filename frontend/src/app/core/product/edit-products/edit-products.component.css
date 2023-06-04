@@ -1,22 +1,8 @@
-.create-box{
-  display: flex;
-  justify-content: center;
-  margin: 10px 10px;
-}
 .card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 15px;
   column-gap: 2rem;
-  flex-direction: column;
-}
-.container1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 15px;
-  column-gap: 3rem;
 }
 .card {
   width: 700px;
@@ -34,9 +20,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.toolbar-container{
-  display: flex;
-  flex-direction: flex-start;
 }
