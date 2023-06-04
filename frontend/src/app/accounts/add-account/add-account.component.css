@@ -3,3 +3,13 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.example-card {
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
