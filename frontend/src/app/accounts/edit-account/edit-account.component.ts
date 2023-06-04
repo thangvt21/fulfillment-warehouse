@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { AccountsService } from '../accounts.service';
+import { AccountsService } from '../../core/services/accounts.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Accounts } from '../accounts';
+import { Accounts } from '../../core/interfaces/accounts';
 
 @Component({
   selector: 'app-edit-account',

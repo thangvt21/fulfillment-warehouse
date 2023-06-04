@@ -5,14 +5,10 @@
       "name": "BODYTRA",
       "code": "BDT",
       "weightUnit": "gram",
-      "weight": "100",
-      "size": [
-        {
-          "Lenght": 10,
-          "Width": 10,
-          "Height": 10
-        }
-      ],
+      "weight": 100,
+      "Lenght": "1",
+      "Width": 10,
+      "Height": 10,
       "description": "Tra tot cho suc khoe.",
       "imgUrl": "https://drive.google.com/file/d/1LrJ02rNirKtVqUn6wwMvKrtfd4w7lbB6/view?usp=sharing"
     },
@@ -21,14 +17,10 @@
       "name": "Cafe Xanh (Green)",
       "code": "CX",
       "weightUnit": "gram",
-      "weight": "100",
-      "size": [
-        {
-          "Lenght": 10,
-          "Width": 10,
-          "Height": 10
-        }
-      ],
+      "weight": 100,
+      "Lenght": 10,
+      "Width": 10,
+      "Height": 10,
       "description": "Ho tro giam mo",
       "imgUrl": "https://drive.google.com/file/d/1DzX5qzpoNRGC3zclpK_AA4cjBZlcCe1Q/view?usp=sharing"
     },
@@ -37,16 +29,36 @@
       "name": "Serum Hoshi",
       "code": "SH",
       "weightUnit": "gram",
-      "weight": "50",
-      "size": [
-        {
-          "Lenght": 2,
-          "Width": 2,
-          "Height": 10
-        }
-      ],
+      "weight": 50,
+      "Lenght": 10,
+      "Width": 10,
+      "Height": 10,
       "description": "Hang de vo, de bi chay serum trong qua trinh van chuyen",
       "imgUrl": "https://drive.google.com/file/d/1JKCxYya_ILREIqGPnf53cOIDzi9klxP-/view?usp=sharing"
+    },
+    {
+      "id": 4,
+      "name": "asdasd",
+      "code": "ASD",
+      "weightUnit": "Gram",
+      "weight": "122",
+      "Lenght": null,
+      "Width": "1",
+      "Height": "3",
+      "description": "asdasd",
+      "imgUrl": "asdasd"
+    },
+    {
+      "id": 5,
+      "name": "adcac",
+      "code": "1213123",
+      "weightUnit": "Kg",
+      "weight": "1",
+      "Lenght": "1",
+      "Width": "3",
+      "Height": "5",
+      "description": "asdasd",
+      "imgUrl": "asdasd"
     }
   ],
   "accounts": [
@@ -67,6 +79,18 @@
       "password": "123456",
       "role": "seller",
       "id": 4
+    },
+    {
+      "username": "seller01",
+      "password": "123123213",
+      "role": "seller",
+      "id": 6
+    },
+    {
+      "username": "asdasd",
+      "password": "123",
+      "role": "seller",
+      "id": 7
     }
   ],
   "warehouses": [
@@ -109,5 +133,41 @@
   ],
   "listImports": [
     {}
+  ],
+  "role": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "seller",
+      "name": "Seller"
+    }
+  ],
+  "menu": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code":"seller",
+      "name":"Seller"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "admin",
+      "canedit": true,
+      "candelete": true,
+      "canadd": true
+    },
+    {
+      "role": "seller",
+      "menu": "seller",
+      "canedit": true,
+      "candelete": false,
+      "canadd": true
+    }
   ]
 }
