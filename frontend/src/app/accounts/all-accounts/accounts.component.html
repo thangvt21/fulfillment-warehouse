@@ -1,12 +1,33 @@
-<div class="create-box">
-  <a mat-raised-button color="primary" routerLink="/create">New</a>
+<div class="card-container">
+    <mat-card class="create-box">
+      ACCOUNT LIST
+    </mat-card>
+  <div class="create-box">
+    <a mat-raised-button color="primary" routerLink="/create"><mat-icon>plus_one</mat-icon>New</a>
+  </div>
 </div>
-
-<mat-card *ngFor="let item of Accounts">
-  <mat-card-content>
-    <section class="example-section">
-      <mat-checkbox class="example-margin">{{item.username}}</mat-checkbox>
-    </section>
-  </mat-card-content>
-</mat-card>
+<div class="card-container">
+  <mat-card class="card" *ngFor="let item of Accounts">
+    <mat-card-content class="card-content">
+      <section class="example-section">
+        <mat-checkbox class="example-margin">{{item.username}}</mat-checkbox>
+      </section>
+      <section>
+        <mat-card-actions class="card-content">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+          </button>
+            <mat-menu class="form-container" #menu="matMenu">
+              <div mat-menu-item>
+                <a mat-raised-button color="primary" [routerLink]="['/edit',item.id]">Edit</a>
+              </div>
+              <div mat-menu-item>
+                <button mat-flat-button color="warn" (click)="deleteItem(item.id)">Delete</button>
+              </div>
+            </mat-menu>
+        </mat-card-actions>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>
 

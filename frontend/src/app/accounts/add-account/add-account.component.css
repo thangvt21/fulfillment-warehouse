@@ -1,15 +1,18 @@
-.form-container {
+.card-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.example-card {
   justify-content: center;
-  align-items: center;
-  padding: 50px;
+  margin-top: 15px;
+  column-gap: 2rem;
+}
+.card {
+  width: 700px;
 }
 .container {
   display: flex;
+  flex-direction: column;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }

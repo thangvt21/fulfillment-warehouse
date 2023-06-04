@@ -17,13 +17,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {ReactiveFormsModule} from '@angular/forms';
 import { EditAccountComponent } from './accounts/edit-account/edit-account.component';
-
+import {MatChipsModule} from '@angular/material/chips';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { DeleteDialogAccountsComponent } from './accounts/delete-dialog-accounts/delete-dialog-accounts.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
     AccountsComponent,
     CreateAccountComponent,
-    EditAccountComponent
+    EditAccountComponent,
+    DeleteDialogAccountsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,12 @@ import { EditAccountComponent } from './accounts/edit-account/edit-account.compo
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatChipsModule,
+    MatSidenavModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

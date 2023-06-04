@@ -51,22 +51,22 @@
   ],
   "accounts": [
     {
-      "id": 1,
-      "username": "seller1",
-      "password": "Seller123@!",
-      "role": "seller"
-    },
-    {
       "id": 2,
       "username": "admin",
       "password": "Admin123@!",
       "role": "admin"
     },
     {
-      "username": "seller2",
+      "id": 3,
+      "username": "seller21",
+      "password": "123456",
+      "role": "seller"
+    },
+    {
+      "username": "seller 3",
       "password": "123456",
       "role": "seller",
-      "id": 3
+      "id": 4
     }
   ],
   "warehouses": [
