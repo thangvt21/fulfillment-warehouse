@@ -1,23 +1,16 @@
-<mat-drawer-container class="card-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-icon-button>
-      <mat-icon>menu</mat-icon>
-    </button> -->
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <div>
-      <mat-toolbar color="primary">
-        <button type="button" mat-button (click)="drawer.toggle()">
-          <mat-icon>home</mat-icon>
-        </button>
-        <span>Fulfillment</span>
+    <div class="toolbar-containner example-button-row">
+        <mat-toolbar class="example-button-row" color="primary">
+          <a mat-flat-button color="primary" [routerLink]="['/']"><mat-icon>home</mat-icon></a>
+          <span>Fulfillment</span>
+            <div>
+              <a mat-flat-button  color="primary" [routerLink]="['/account']">ACCOUNT</a>
+            </div>
+            <div>
+              <a mat-flat-button color="primary" [routerLink]="['/product']">PRODUCT</a>
+            </div>
+            <div>
+              <a mat-flat-button color="primary" [routerLink]="['/warehouse']">WAREHOUSE</a>
+            </div>
       </mat-toolbar>
     </div>
-  </div>
-
-</mat-drawer-container>
-
 <router-outlet></router-outlet>

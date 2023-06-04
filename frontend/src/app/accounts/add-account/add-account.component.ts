@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Accounts } from '../accounts';
-import { AccountsService } from '../accounts.service';
+import { Accounts } from '../../core/interfaces/accounts';
+import { AccountsService } from '../../core/services/accounts.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,7 +23,7 @@ export class CreateAccountComponent {
 
   create(){
     this.AccountsService.create(this.createAccountForm.value as Accounts).subscribe(() => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/account']);
     })
   }
 }
