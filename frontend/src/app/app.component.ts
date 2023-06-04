@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  showFiller = false;
   title = 'frontend';
 }
 

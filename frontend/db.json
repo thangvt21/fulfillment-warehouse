@@ -6,7 +6,7 @@
       "code": "BDT",
       "weightUnit": "gram",
       "weight": "100",
-      "size":[
+      "size": [
         {
           "Lenght": 10,
           "Width": 10,
@@ -22,7 +22,7 @@
       "code": "CX",
       "weightUnit": "gram",
       "weight": "100",
-      "size":[
+      "size": [
         {
           "Lenght": 10,
           "Width": 10,
@@ -38,7 +38,7 @@
       "code": "SH",
       "weightUnit": "gram",
       "weight": "50",
-      "size":[
+      "size": [
         {
           "Lenght": 2,
           "Width": 2,
@@ -51,16 +51,22 @@
   ],
   "accounts": [
     {
-      "id": 1,
-      "username": "seller1",
-      "password": "Seller123@!",
-      "role": "seller"
-    },
-    {
       "id": 2,
       "username": "admin",
       "password": "Admin123@!",
       "role": "admin"
+    },
+    {
+      "id": 3,
+      "username": "seller21",
+      "password": "123456",
+      "role": "seller"
+    },
+    {
+      "username": "seller 3",
+      "password": "123456",
+      "role": "seller",
+      "id": 4
     }
   ],
   "warehouses": [
@@ -102,9 +108,6 @@
     }
   ],
   "listImports": [
-    {
-
-    }
+    {}
   ]
-
 }

@@ -16,4 +16,19 @@ export class AccountsService {
   create(payload:Accounts){
     return this.http.post('http://localhost:3000/accounts',payload);
   }
+
+  getByID(id:number):Observable<Accounts>{
+    return this.http.get<Accounts>(`http://localhost:3000/accounts/${id}`);
+  }
+
+  update(payload:Accounts){
+    return this.http.put(
+      `http://localhost:3000/accounts/${payload.id}`,
+       payload
+    );
+  }
+
+  delete(id:number){
+    return this.http.delete(`http://localhost:3000/accounts/${id}`);
+  }
 }
