@@ -5,15 +5,15 @@ import { CreateAccountComponent } from './accounts/add-account/add-account.compo
 import { EditAccountComponent } from './accounts/edit-account/edit-account.component';
 const routes: Routes = [
   {
-    path: '',
+    path: 'account',
     component: AccountsComponent
   },
   {
-    path: 'accounts/create',
+    path: 'account/create',
     component: CreateAccountComponent
   },
   {
-    path: 'edit/:id',
+    path: 'account/edit/:id',
     component: EditAccountComponent
   }
 

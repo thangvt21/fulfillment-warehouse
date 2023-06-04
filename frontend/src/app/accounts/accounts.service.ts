@@ -9,8 +9,19 @@ export class AccountsService {
 
   constructor(private http:HttpClient) { }
 
-  get():Observable<Accounts[]>{
-    return this.http.get<Accounts[]>("http://localhost:3000/accounts")
+  get(sortColumn: string, order: string, searchKey:string):Observable<Accounts[]>{
+    let url = "http://localhost:3000/accounts?"
+    if(sortColumn && order){
+      url = `${url}_sort=${sortColumn}&_order=${order}`
+    }
+    if(searchKey){
+      if(url.indexOf("&") > -1){
+        url = `${url}&q=${searchKey}`;
+      } else {
+        url = `${url}q=${searchKey}`;
+      }
+    }
+    return this.http.get<Accounts[]>(url);
   }
 
   create(payload:Accounts){

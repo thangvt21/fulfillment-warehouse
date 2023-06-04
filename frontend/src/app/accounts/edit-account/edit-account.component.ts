@@ -43,7 +43,7 @@ export class EditAccountComponent {
   update(){
     this.AccountsService.update((this.updateAccountForm.value as Accounts))
     .subscribe(()=>{
-      this.router.navigate(["/"]);
+      this.router.navigate(["/account"]);
     });
   }
 }
