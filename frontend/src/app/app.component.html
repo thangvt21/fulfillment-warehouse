@@ -1,0 +1,23 @@
+<mat-drawer-container class="card-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button> -->
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <div>
+      <mat-toolbar color="primary">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon>home</mat-icon>
+        </button>
+        <span>Fulfillment</span>
+      </mat-toolbar>
+    </div>
+  </div>
+
+</mat-drawer-container>
+
+<router-outlet></router-outlet>

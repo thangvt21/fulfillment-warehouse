@@ -1,0 +1,113 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "BODYTRA",
+      "code": "BDT",
+      "weightUnit": "gram",
+      "weight": "100",
+      "size": [
+        {
+          "Lenght": 10,
+          "Width": 10,
+          "Height": 10
+        }
+      ],
+      "description": "Tra tot cho suc khoe.",
+      "imgUrl": "https://drive.google.com/file/d/1LrJ02rNirKtVqUn6wwMvKrtfd4w7lbB6/view?usp=sharing"
+    },
+    {
+      "id": 2,
+      "name": "Cafe Xanh (Green)",
+      "code": "CX",
+      "weightUnit": "gram",
+      "weight": "100",
+      "size": [
+        {
+          "Lenght": 10,
+          "Width": 10,
+          "Height": 10
+        }
+      ],
+      "description": "Ho tro giam mo",
+      "imgUrl": "https://drive.google.com/file/d/1DzX5qzpoNRGC3zclpK_AA4cjBZlcCe1Q/view?usp=sharing"
+    },
+    {
+      "id": 3,
+      "name": "Serum Hoshi",
+      "code": "SH",
+      "weightUnit": "gram",
+      "weight": "50",
+      "size": [
+        {
+          "Lenght": 2,
+          "Width": 2,
+          "Height": 10
+        }
+      ],
+      "description": "Hang de vo, de bi chay serum trong qua trinh van chuyen",
+      "imgUrl": "https://drive.google.com/file/d/1JKCxYya_ILREIqGPnf53cOIDzi9klxP-/view?usp=sharing"
+    }
+  ],
+  "accounts": [
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "Admin123@!",
+      "role": "admin"
+    },
+    {
+      "id": 3,
+      "username": "seller21",
+      "password": "123456",
+      "role": "seller"
+    },
+    {
+      "username": "seller 3",
+      "password": "123456",
+      "role": "seller",
+      "id": 4
+    }
+  ],
+  "warehouses": [
+    {
+      "id": 1,
+      "name": "VN",
+      "address1": "2 Nguyen Hoang St",
+      "address2": "toa nha song Da 9",
+      "city": "Hanoi",
+      "state": "HN",
+      "country": "VN",
+      "zip": "100000",
+      "slot": "1000",
+      "status": 0,
+      "description": "Vietnam"
+    },
+    {
+      "id": 2,
+      "name": "Texas",
+      "address1": "1303 East Arapaho rd",
+      "address2": "Ste # 100",
+      "city": "Richardson",
+      "state": "TX",
+      "country": "US",
+      "zip": "75081",
+      "slot": "10000",
+      "status": 1,
+      "description": "US"
+    }
+  ],
+  "status": [
+    {
+      "id": 0,
+      "status": "Available"
+    },
+    {
+      "id": 1,
+      "status": "Full"
+    }
+  ],
+  "listImports": [
+    {}
+  ]
+}
