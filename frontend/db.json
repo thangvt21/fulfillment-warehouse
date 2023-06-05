@@ -4,7 +4,7 @@
       "id": 1,
       "name": "BODYTRA",
       "code": "BDT",
-      "weightUnit": "gram",
+      "weightUnit": "Gram",
       "weight": 100,
       "Lenght": "1",
       "Width": 10,
@@ -16,7 +16,7 @@
       "id": 2,
       "name": "Cafe Xanh (Green)",
       "code": "CX",
-      "weightUnit": "gram",
+      "weightUnit": "Kg",
       "weight": 100,
       "Lenght": 10,
       "Width": 10,
@@ -28,7 +28,7 @@
       "id": 3,
       "name": "Serum Hoshi",
       "code": "SH",
-      "weightUnit": "gram",
+      "weightUnit": "Gram",
       "weight": 50,
       "Lenght": 10,
       "Width": 10,
@@ -104,21 +104,23 @@
       "country": "VN",
       "zip": "100000",
       "slot": "1000",
-      "status": 0,
-      "description": "Vietnam"
+      "status": "Available",
+      "description": "Vietnam",
+      "quantityItems": "100"
     },
     {
       "id": 2,
-      "name": "Texas",
       "address1": "1303 East Arapaho rd",
+      "name": "Texas",
       "address2": "Ste # 100",
       "city": "Richardson",
       "state": "TX",
       "country": "US",
       "zip": "75081",
       "slot": "10000",
-      "status": 1,
-      "description": "US"
+      "status": "Full",
+      "description": "US",
+      "quantityItems": "10000"
     }
   ],
   "status": [
@@ -150,8 +152,8 @@
       "name": "Admin"
     },
     {
-      "code":"seller",
-      "name":"Seller"
+      "code": "seller",
+      "name": "Seller"
     }
   ],
   "roleaccess": [

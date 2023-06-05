@@ -1,6 +1,6 @@
 <div class="card-container">
   <mat-card class="create-box">
-    PRODUCT LIST
+    WAREHOUSE LIST
   </mat-card>
 <div class=" card card-content">
   <mat-form-field>
@@ -18,25 +18,25 @@
     </button>
   </mat-form-field>
   <div>
-    <a mat-raised-button color="primary" routerLink="/product/create"><mat-icon>plus_one</mat-icon>New</a>
+    <a mat-raised-button color="primary" routerLink="/warehouse/create"><mat-icon>plus_one</mat-icon>New</a>
   </div>
 </div>
 </div>
 <div class="card-container">
-  <p>Total: {{totalRecords}}</p>
-<mat-card class="card" *ngFor="let item of Product">
+<p>Total: {{totalRecords}}</p>
+<mat-card class="card" *ngFor="let item of Warehouse">
   <mat-card-content class="card-content">
     <section class="example-section">
       <mat-card-content class="example-margin">{{item.id}}</mat-card-content>
     </section>
-    <section>
-      <img mat-card-image src= {{item.imgUrl}} alt={{item.code}}/>
-    </section>
     <section class="example-section">
       <mat-card-content class="example-margin">{{item.name}}</mat-card-content>
     </section>
-    <section>
-      <p>{{item.code}}</p>
+    <section class="example-section">
+      <mat-card-content class="example-margin">{{item.quantityItems}} / {{item.slot}}</mat-card-content>
+    </section>
+    <section class="example-section">
+      <mat-card-content class="example-margin">{{item.status}}</mat-card-content>
     </section>
     <section>
       <mat-card-actions class="card-content">
@@ -45,7 +45,7 @@
         </button>
           <mat-menu class="form-container" #menu="matMenu">
             <div mat-menu-item>
-              <a mat-raised-button color="primary" [routerLink]="['/product/edit',item.id]">Edit</a>
+              <a mat-raised-button color="primary" [routerLink]="['/warehouse/edit',item.id]">Edit</a>
             </div>
             <div mat-menu-item>
               <button mat-flat-button color="warn" (click)="deleteItem(item.id)">Delete</button>
@@ -55,6 +55,8 @@
     </section>
   </mat-card-content>
 </mat-card>
+
+
 <mat-paginator [length]="totalRecords"
 [pageSize]="pageSize"
 [pageSizeOptions]="[5, 10, 20, 100]"
