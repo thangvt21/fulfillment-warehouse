@@ -96,8 +96,8 @@
   "warehouses": [
     {
       "id": 1,
-      "name": "VN",
       "address1": "2 Nguyen Hoang St",
+      "name": "VN",
       "address2": "toa nha song Da 9",
       "city": "Hanoi",
       "state": "HN",
@@ -134,7 +134,34 @@
     }
   ],
   "listImports": [
-    {}
+    {
+      "id": 1,
+      "name": "39205739393",
+      "product": [
+        {
+          "id": 1,
+          "quantity": 150
+        },
+        {
+          "id": 2,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "422105739222",
+      "product": [
+        {
+          "id": 1,
+          "quantity": 50
+        },
+        {
+          "id": 2,
+          "quantity": 100
+        }
+      ]
+    }
   ],
   "role": [
     {
