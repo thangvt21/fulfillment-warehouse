@@ -23,6 +23,7 @@ export class CreateProductsComponent {
     Lenght: [],
     Width: [],
     Height: [],
+    price:[],
     description: [''],
     imgUrl: [''],
   });

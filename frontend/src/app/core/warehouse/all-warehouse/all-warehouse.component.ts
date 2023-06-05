@@ -1,26 +1,25 @@
 import { Component } from "@angular/core";
-import { Product } from "../../interfaces/product";
 import { FormControl } from "@angular/forms";
 import { MatDialog } from "@angular/material/dialog";
-import { ProductService } from "../../services/product.service";
+import { Warehouse } from "../../interfaces/warehouse";
 import { PageEvent } from "@angular/material/paginator";
-import { RemoveProductsComponent } from "../remove-products/remove-products.component";
-import { read, utils, writeFile } from "xlsx";
+import { WarehouseService } from "../../services/warehouse.service";
+import { RemoveWarehouseComponent } from "../remove-warehouse/remove-warehouse.component";
+import { DetailWarehouseComponent } from "../detail-warehouse/detail-warehouse.component";
 @Component({
-  selector: "app-all-products",
-  templateUrl: "./all-products.component.html",
-  styleUrls: ["./all-products.component.css"],
+  selector: "app-all-warehouse",
+  templateUrl: "./all-warehouse.component.html",
+  styleUrls: ["./all-warehouse.component.css"],
 })
-export class AllProductsComponent {
-  Product: Product[] = [];
-  data: any[] = [];
+export class AllWarehouseComponent {
+  Warehouse: Warehouse[] = [];
   sortingControl = new FormControl("");
   searchControl = new FormControl("");
   pageIndex: number = 0;
   pageSize: number = 5;
   totalRecords: number = 0;
   constructor(
-    private ProductService: ProductService,
+    private WarehouseService: WarehouseService,
     private dialog: MatDialog
   ) {}
 
@@ -37,6 +36,7 @@ export class AllProductsComponent {
       }
     });
   }
+
   textSearch() {
     let sortData = this.doSorting(this.sortingControl.value ?? "");
     this.getAPI(
@@ -69,14 +69,14 @@ export class AllProductsComponent {
   }
 
   getAPI(sortColumn: string, order: string, searchKey: string) {
-    this.ProductService.get(
+    this.WarehouseService.get(
       sortColumn,
       order,
       searchKey,
       this.pageIndex + 1,
       this.pageSize
     ).subscribe((response) => {
-      this.Product = response.body as Product[];
+      this.Warehouse = response.body as Warehouse[];
       this.totalRecords = response.headers.get("X-Total-Count")
         ? Number(response.headers.get("X-Total-Count"))
         : 0;
@@ -84,17 +84,18 @@ export class AllProductsComponent {
   }
 
   deleteItem(id: number) {
-    const dialogRef = this.dialog.open(RemoveProductsComponent, {
+    const dialogRef = this.dialog.open(RemoveWarehouseComponent, {
       width: "250px",
       data: { id },
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.Product = this.Product.filter((_) => _.id !== result);
+        this.Warehouse = this.Warehouse.filter((_) => _.id !== result);
       }
     });
   }
+
   handlePageEvent(e: PageEvent) {
     this.pageIndex = e.pageIndex;
     this.pageSize = e.pageSize;
@@ -104,45 +105,5 @@ export class AllProductsComponent {
       sortData.order,
       this.searchControl.value ?? ""
     );
-  }
-
-  handleImport($event: any) {
-    const files = $event.target.files;
-    if (files.length) {
-      const file = files[0];
-      const reader = new FileReader();
-      reader.onload = (event: any) => {
-        const wb = read(event.target.result);
-        const sheets = wb.SheetNames;
-        if (sheets.length) {
-          const rows = utils.sheet_to_json(wb.Sheets[sheets[0]]);
-          this.data = rows;
-        }
-      };
-      reader.readAsArrayBuffer(file);
-    }
-  }
-
-  handleExport() {
-    const headings = [
-      [
-        "id",
-        "name",
-        "code",
-        "weightUnit",
-        "weight",
-        "Lenght",
-        "Width",
-        "Height",
-        "description",
-        "imgUrl",
-      ],
-    ];
-    const wb = utils.book_new();
-    const ws: any = utils.json_to_sheet([]);
-    utils.sheet_add_aoa(ws, headings);
-    utils.sheet_add_json(ws, this.data, { origin: "A2", skipHeader: true });
-    utils.book_append_sheet(wb, ws, "Template");
-    writeFile(wb, "Product_template.csv");
   }
 }

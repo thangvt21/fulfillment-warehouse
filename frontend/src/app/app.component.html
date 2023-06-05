@@ -1,15 +1,24 @@
     <div class="toolbar-containner example-button-row">
         <mat-toolbar class="example-button-row" color="primary">
           <a mat-flat-button color="primary" [routerLink]="['/']"><mat-icon>home</mat-icon></a>
-          <span>Fulfillment</span>
+          <span>MY WAREHOUSE</span>
+          <div>
+            <a mat-flat-button color="primary" [routerLink]="['/product']">PRODUCT</a>
+          </div>
+          <div>
+            <a mat-flat-button color="primary" [routerLink]="['/import']">IMPORT</a>
+          </div>
+          <div>
+            <a mat-flat-button color="primary" [routerLink]="['/export']">EXPORT</a>
+          </div>
             <div>
               <a mat-flat-button  color="primary" [routerLink]="['/account']">ACCOUNT</a>
             </div>
             <div>
-              <a mat-flat-button color="primary" [routerLink]="['/product']">PRODUCT</a>
+              <a mat-flat-button color="primary" [routerLink]="['/warehouse']">WAREHOUSE</a>
             </div>
             <div>
-              <a mat-flat-button color="primary" [routerLink]="['/warehouse']">WAREHOUSE</a>
+              <a mat-flat-button color="primary" [routerLink]="['/payment']">PAYMENT</a>
             </div>
       </mat-toolbar>
     </div>
