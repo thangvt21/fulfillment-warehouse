@@ -12,6 +12,8 @@ import { CreateWarehouseComponent } from "./core/warehouse/create-warehouse/crea
 import { DetailWarehouseComponent } from "./core/warehouse/detail-warehouse/detail-warehouse.component";
 import { AllImportsComponent } from "./core/import/all-imports/all-imports.component";
 import { CreateImportsComponent } from "./core/import/create-imports/create-imports.component";
+import { PaymentComponent } from "./core/payment/payment.component";
+
 const routes: Routes = [
   { path: "account", component: AccountsComponent }, //admin
   { path: "account/create", component: CreateAccountComponent },
@@ -25,6 +27,7 @@ const routes: Routes = [
   { path: "warehouse/detail/:id", component: DetailWarehouseComponent },
   { path: "import", component: AllImportsComponent },
   { path: "import/create", component: CreateImportsComponent },
+  { path: "payment", component: PaymentComponent },
 ];
 
 @NgModule({

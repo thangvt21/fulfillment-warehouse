@@ -38,6 +38,8 @@ import { DetailWarehouseComponent } from "./core/warehouse/detail-warehouse/deta
 import { AllImportsComponent } from "./core/import/all-imports/all-imports.component";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { CreateImportsComponent } from './core/import/create-imports/create-imports.component';
+import { PaymentComponent } from './core/payment/payment.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +58,7 @@ import { CreateImportsComponent } from './core/import/create-imports/create-impo
     DetailWarehouseComponent,
     AllImportsComponent,
     CreateImportsComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,6 +83,7 @@ import { CreateImportsComponent } from './core/import/create-imports/create-impo
     MatButtonToggleModule,
     MatTableModule,
     MatExpansionModule,
+    NgxPayPalModule
   ],
   providers: [],
   bootstrap: [AppComponent],
