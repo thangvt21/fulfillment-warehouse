@@ -1,0 +1,68 @@
+<div class="card-container">
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip color="primary">CREATE PRODUCT</mat-chip>
+  </mat-chip-listbox>
+  </div>
+  <div class="card-container">
+    <mat-card class="card">
+      <mat-card-content>
+        <div>
+          <form class="form-container"[formGroup]="updateWarehouseForm" (ngSubmit)="create()">
+            <mat-form-field appearance="fill">
+              <mat-label>name</mat-label>
+              <input matInput placeholder="name" formControlName="name" />
+              <!-- <mat-hint>min 8 characters</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>address1</mat-label>
+              <input matInput placeholder="address1" formControlName="address1" />
+                <!-- <mat-hint>min 6 characters</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>address2</mat-label>
+              <input matInput placeholder="address2" formControlName="address2" />
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>city</mat-label>
+              <input matInput placeholder="city" formControlName="city" />
+                <!-- <mat-hint>min 6 characters</mat-hint> -->
+            </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>state</mat-label>
+                <input matInput placeholder="state" formControlName="state" />
+                  <!-- <mat-hint>min 6 characters</mat-hint> -->
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>country</mat-label>
+                <input matInput placeholder="country" formControlName="country" />
+                  <!-- <mat-hint>min 6 characters</mat-hint> -->
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>zip</mat-label>
+                <input matInput placeholder="zip" formControlName="zip" />
+                  <!-- <mat-hint>min 6 characters</mat-hint> -->
+              </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>slot:</mat-label>
+              <input matInput placeholder="slot" formControlName="slot" />
+              <!-- <mat-hint>min 6 characters</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>status:</mat-label>
+                <mat-select formControlName="status">
+                  <mat-option value="Full">Full</mat-option>
+                  <mat-option value="Available">Available</mat-option>
+                </mat-select>
+              <!-- <mat-hint>min 6 characters</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-label>description</mat-label>
+              <input matInput placeholder="description" formControlName="description" />
+                <!-- <mat-hint>min 6 characters</mat-hint> -->
+            </mat-form-field>
+            <button mat-raised-button color="primary" style="margin: 10px 0px; align-self: center;">Save</button>
+          </form>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>

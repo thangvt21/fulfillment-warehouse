@@ -27,7 +27,13 @@
   <mat-card class="card" *ngFor="let item of Accounts">
     <mat-card-content class="card-content">
       <section class="example-section">
-        <mat-checkbox class="example-margin">{{item.username}}</mat-checkbox>
+        <mat-card-content class="example-margin1">{{item.id}}</mat-card-content>
+      </section>
+      <section class="example-section">
+        <mat-card-content class="example-margin2">{{item.username}}</mat-card-content>
+      </section>
+      <section class="example-section">
+        <mat-card-content class="example-margin3">{{item.role}}</mat-card-content>
       </section>
       <section>
         <mat-card-actions class="card-content">
