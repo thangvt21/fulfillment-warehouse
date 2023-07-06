@@ -9,6 +9,7 @@
       "Lenght": "1",
       "Width": 10,
       "Height": 10,
+      "price": 5,
       "description": "Tra tot cho suc khoe.",
       "imgUrl": "https://drive.google.com/file/d/1LrJ02rNirKtVqUn6wwMvKrtfd4w7lbB6/view?usp=sharing"
     },
@@ -21,6 +22,7 @@
       "Lenght": 10,
       "Width": 10,
       "Height": 10,
+      "price": "3.5",
       "description": "Ho tro giam mo",
       "imgUrl": "https://drive.google.com/file/d/1DzX5qzpoNRGC3zclpK_AA4cjBZlcCe1Q/view?usp=sharing"
     },
@@ -33,6 +35,7 @@
       "Lenght": 10,
       "Width": 10,
       "Height": 10,
+      "price": 10,
       "description": "Hang de vo, de bi chay serum trong qua trinh van chuyen",
       "imgUrl": "https://drive.google.com/file/d/1JKCxYya_ILREIqGPnf53cOIDzi9klxP-/view?usp=sharing"
     },
@@ -45,6 +48,7 @@
       "Lenght": null,
       "Width": "1",
       "Height": "3",
+      "price": 5,
       "description": "asdasd",
       "imgUrl": "asdasd"
     },
@@ -57,6 +61,7 @@
       "Lenght": "1",
       "Width": "3",
       "Height": "5",
+      "price": 5,
       "description": "asdasd",
       "imgUrl": "asdasd"
     }
@@ -96,8 +101,8 @@
   "warehouses": [
     {
       "id": 1,
-      "name": "VN",
       "address1": "2 Nguyen Hoang St",
+      "name": "VN",
       "address2": "toa nha song Da 9",
       "city": "Hanoi",
       "state": "HN",
@@ -134,7 +139,34 @@
     }
   ],
   "listImports": [
-    {}
+    {
+      "id": 1,
+      "name": "39205739393",
+      "product": [
+        {
+          "id": 1,
+          "quantity": 150
+        },
+        {
+          "id": 2,
+          "quantity": 50
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "422105739222",
+      "product": [
+        {
+          "id": 1,
+          "quantity": 50
+        },
+        {
+          "id": 2,
+          "quantity": 100
+        }
+      ]
+    }
   ],
   "role": [
     {

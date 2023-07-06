@@ -1,0 +1,96 @@
+<div class="card-container">
+  <mat-card class="create-box">
+    PAYMENT
+  </mat-card>
+<mat-card class="card" *ngFor="let item of Import">
+<section class="example-section">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-card-content class="example-margin1">{{item.id}}</mat-card-content>
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-card-content class="example-margin1">{{item.name}}</mat-card-content>
+      </mat-panel-description>
+      <section>
+        <mat-card-actions class="card-content">
+          <button mat-flat-button color="primary" class="btn btn-primary" (click)="
+          addItemToCart({
+            id: item.id,
+            name: item.name,
+            price: defaultPrice
+          })
+        ">
+    Add to Cart
+  </button>
+        </mat-card-actions>
+      </section>
+    </mat-expansion-panel-header>
+
+    <mat-card *ngFor="let product of item.product">
+      <mat-card-content>
+        {{product.id}}
+        {{product.quantity}}
+      </mat-card-content>
+    </mat-card>
+    <!-- <mat-card-content class="example-margin1">{{item.product}}</mat-card-content> -->
+    <!-- <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">NEXT</button>
+    </mat-action-row> -->
+
+  </mat-expansion-panel>
+
+</section>
+</mat-card>
+  <br />
+
+    <div class="card">
+      <mat-card class="create-box">Shopping Cart</mat-card>
+      <table id="customers">
+        <thead>
+          <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cart">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>
+              <button mat-plat-button color="primary" class="btn btn-secondary btn-sm" (click)="removeItemFromCart(item)">
+                -
+              </button>
+              {{ item.quantity }}
+              <button mat-plat-button color="primary" class="btn btn-secondary btn-sm" (click)="addItemToCart(item)">
+                +
+              </button>
+            </td>
+            <td>{{ item.price * item.quantity }}</td>
+            <td>
+              <button mat-plat-button color="primary" class="btn btn-danger btn-sm" (click)="removeItemFromCart(item)">
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <br />
+      <ng-container *ngIf="cart.length; else elseCartHas">
+        <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+      </ng-container>
+      <ng-template #elseCartHas>
+        Select Product
+      </ng-template>
+      <p *ngIf="showSuccess" class="text-success mt-3">
+        Checkout successful! Thank you for your purchase.
+      </p>
+      <p *ngIf="showError" class="text-error mt-3">
+        Payment Failed! .
+      </p>
+    </div>
+

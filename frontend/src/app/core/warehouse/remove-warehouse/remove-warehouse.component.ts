@@ -11,11 +11,19 @@ export class RemoveWarehouseComponent {
   constructor(
     public dialogRef: MatDialogRef<RemoveWarehouseComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
+
     private ProductService: WarehouseService
   ) {}
 
   confirmDel() {
     this.ProductService.delete(this.data.id).subscribe(() => {
+
+    private WarehouseService: WarehouseService
+  ) {}
+
+  confirmDel() {
+    this.WarehouseService.delete(this.data.id).subscribe(() => {
+
       this.dialogRef.close(this.data.id);
     });
   }

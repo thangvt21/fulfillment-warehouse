@@ -1,0 +1,23 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  column-gap: 2rem;
+}
+.card {
+  width: 700px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

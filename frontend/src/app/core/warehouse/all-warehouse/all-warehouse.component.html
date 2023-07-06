@@ -45,6 +45,11 @@
         </button>
           <mat-menu class="form-container" #menu="matMenu">
             <div mat-menu-item>
+
+              <a mat-raised-button color="primary" [routerLink]="['/warehouse/detail',item.id]">Detail</a>
+            </div>
+            <div mat-menu-item>
+
               <a mat-raised-button color="primary" [routerLink]="['/warehouse/edit',item.id]">Edit</a>
             </div>
             <div mat-menu-item>

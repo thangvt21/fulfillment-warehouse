@@ -35,6 +35,7 @@ export class EditProductsComponent {
     Lenght: [0],
     Width: [0],
     Height: [0],
+    price:[0],
     description: [''],
     imgUrl: [''],
   });

@@ -20,6 +20,11 @@
   <div>
     <a mat-raised-button color="primary" routerLink="/product/create"><mat-icon>plus_one</mat-icon>New</a>
   </div>
+
+</div>
+<div>
+  <input type="file" class="custom-file-input" id="inputGroupFile" required (change)="handleImport($event)"
+      accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
 </div>
 </div>
 <div class="card-container">
@@ -39,6 +44,9 @@
       <p>{{item.code}}</p>
     </section>
     <section>
+      <p>{{item.price}}$</p>
+    </section>
+    <section>
       <mat-card-actions class="card-content">
         <button mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>menu</mat-icon>
@@ -55,6 +63,7 @@
     </section>
   </mat-card-content>
 </mat-card>
+
 <mat-paginator [length]="totalRecords"
 [pageSize]="pageSize"
 [pageSizeOptions]="[5, 10, 20, 100]"

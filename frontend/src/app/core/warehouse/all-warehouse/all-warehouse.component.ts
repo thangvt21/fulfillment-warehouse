@@ -5,6 +5,9 @@ import { Warehouse } from "../../interfaces/warehouse";
 import { PageEvent } from "@angular/material/paginator";
 import { WarehouseService } from "../../services/warehouse.service";
 import { RemoveWarehouseComponent } from "../remove-warehouse/remove-warehouse.component";
+
+import { DetailWarehouseComponent } from "../detail-warehouse/detail-warehouse.component";
+
 @Component({
   selector: "app-all-warehouse",
   templateUrl: "./all-warehouse.component.html",

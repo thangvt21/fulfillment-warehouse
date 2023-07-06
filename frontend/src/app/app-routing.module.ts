@@ -10,6 +10,12 @@ import { AllWarehouseComponent } from "./core/warehouse/all-warehouse/all-wareho
 import { EditWarehouseComponent } from "./core/warehouse/edit-warehouse/edit-warehouse.component";
 import { CreateWarehouseComponent } from "./core/warehouse/create-warehouse/create-warehouse.component";
 
+import { DetailWarehouseComponent } from "./core/warehouse/detail-warehouse/detail-warehouse.component";
+import { AllImportsComponent } from "./core/import/all-imports/all-imports.component";
+import { CreateImportsComponent } from "./core/import/create-imports/create-imports.component";
+import { PaymentComponent } from "./core/payment/payment.component";
+
+
 const routes: Routes = [
   { path: "account", component: AccountsComponent }, //admin
   { path: "account/create", component: CreateAccountComponent },
@@ -20,6 +26,12 @@ const routes: Routes = [
   { path: "warehouse", component: AllWarehouseComponent },
   { path: "warehouse/edit/:id", component: EditWarehouseComponent },
   { path: "warehouse/create", component: CreateWarehouseComponent },
+
+  { path: "warehouse/detail/:id", component: DetailWarehouseComponent },
+  { path: "import", component: AllImportsComponent },
+  { path: "import/create", component: CreateImportsComponent },
+  { path: "payment", component: PaymentComponent },
+
 ];
 
 @NgModule({

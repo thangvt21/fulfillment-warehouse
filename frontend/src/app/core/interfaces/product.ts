@@ -7,6 +7,7 @@ export interface Product {
   Lenght: number | null;
   Width: number | null;
   Height: number | null;
+  price: number | null;
   description: string;
   imgUrl: string;
 }
