@@ -34,12 +34,14 @@ import { EditWarehouseComponent } from "./core/warehouse/edit-warehouse/edit-war
 import { CreateWarehouseComponent } from "./core/warehouse/create-warehouse/create-warehouse.component";
 import { RemoveWarehouseComponent } from "./core/warehouse/remove-warehouse/remove-warehouse.component";
 import { MatTableModule } from "@angular/material/table";
+
 import { DetailWarehouseComponent } from "./core/warehouse/detail-warehouse/detail-warehouse.component";
 import { AllImportsComponent } from "./core/import/all-imports/all-imports.component";
 import { MatExpansionModule } from "@angular/material/expansion";
 import { CreateImportsComponent } from './core/import/create-imports/create-imports.component';
 import { PaymentComponent } from './core/payment/payment.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,10 +57,12 @@ import { NgxPayPalModule } from 'ngx-paypal';
     EditWarehouseComponent,
     CreateWarehouseComponent,
     RemoveWarehouseComponent,
+
     DetailWarehouseComponent,
     AllImportsComponent,
     CreateImportsComponent,
     PaymentComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -82,8 +86,10 @@ import { NgxPayPalModule } from 'ngx-paypal';
     MatPaginatorModule,
     MatButtonToggleModule,
     MatTableModule,
+
     MatExpansionModule,
     NgxPayPalModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
